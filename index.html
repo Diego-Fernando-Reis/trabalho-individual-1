@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./css/style.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diego Fernando Reis Batista</title>
+  <link rel="icon" type="image/x-icon" href="./img/Ellipse 13.png">
+</head>
+<body id="body">
+  <div class="subir">
+
+  </div>
+  <header id="home">
+    <div class="logo"></div>
+  </header>
+  <main id="mudar">
+    <div class="banner">
+      <div class="redes-sociais">
+        <div class="behance"></div>
+        <div class="dribbble"></div>
+        <div class="linkedin"></div>
+        <div class="github"></div>
+      </div>
+      <div class="nome">
+        <h2 class="front">Front-End <div class="line"></div></h2>
+        <h1 class="diego" id="cor">DIEGO</h1>
+        <h2 class="fernando" id="cor2">FERNANDO</h2>
+        <h2 class="reis" id="cor3"><span>R</span>EIS</h2>
+        <p class="ux" >UX/UI</p>
+        <h2 class="batista" id="cor4">BATI<span>S</span>TA</h2>
+        <p class="dois">2022</p>
+      </div>
+    </div>
+    <div class="quem-sou-eu" id="cor5">
+      <div class="texto">
+        <h2>Quem eu sou?!</h2>
+        <h3>Meu nome é Diego Fernando, sou programador Front-end, aspirante a ux/ui, passo as madrugadas 
+          programando ou em qualquer horário livre, planejo ser um programador FullStack para ampliar meu 
+          conhecimento, e também criar uma startup baseada em aplicativo, mas minha prioridade é ter uma 
+          carreira em programação com UX/UI.</h3>
+      </div>
+      <div class="texto2" >
+        <h2 id="cor6" class="contorno2">TECNOLOGIAS</h2>
+        <h3>QUE UTILIZO</h3>
+        <div class="icones">
+          <div class="html">
+            <img src="./img/html.png" alt="">
+            <p>Html 5</p>
+          </div>
+          <div class="css">
+            <img src="./img/css-3.png" alt="">
+            <p>CSS 3</p>
+          </div>
+          <div class="bootstrap">
+            <img src="./img/bootstrap.png" alt="">
+            <p>Bootstrap</p>
+          </div>
+          <div class="javascript">
+            <img src="./img/javascript.png" alt="">
+            <p>Javascript</p>
+          </div>
+          <div class="react">
+            <img src="./img/atom.png" alt="">
+            <p>React</p>
+          </div>
+          <div class="wordpress">
+            <img src="./img/wordpress.png" alt="">
+            <p>Wordpress</p>
+          </div>
+          <div class="figma">
+            <img src="./img/figma.png" alt="">
+            <p>Figma</p>
+          </div>
+          <div class="illustrator">
+            <img src="./img/illustrator.png" alt="">
+            <p>Illustrator</p>
+          </div>
+          <div class="photoshop">
+            <img src="./img/photoshop.png" alt="">
+            <p>Photoshop</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hobbies" id="hobbie">
+      <div class="titulo">
+        <h2>HOBBIES</h2>
+        <div class="interno">
+          <div class="texto">
+            <h3>Amante de Valorant, jogando fielmente todos os dias rsrs, amo aprender sobre programação, quero me aprofundar cada vez mais no universo da tecnologia, adoro curtir com os amigos e não pode faltar o mais importante, estar com a minha noiva é uma das melhores coisas no meu tempo de lazer.
+            </h3>
+          </div>
+          <img src="./img/raze.webp" alt="">
+        </div>
+      </div>
+    </div>
+  </main>
+  <script>
+    const navbar = document.getElementById("mudar");
+    const sticky = navbar.offsetTop;
+    const body = document.getElementById('body');
+    const cor = document.getElementById('cor');
+    document.addEventListener("scroll", function() {
+      myFunction();
+    });
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          body.style.backgroundColor = '#2F2F2F';
+          body.style.transition = '.5s';
+          cor.style.color = 'white';
+          cor2.style.color = 'white';
+          cor3.style.color = 'white';
+          cor4.style.color = 'white';
+          cor5.style.color = 'white';
+        } else {
+          body.style.backgroundColor = 'white';
+          body.style.transition = '.5s';
+          cor.style.color = '#2F2F2F';
+          cor2.style.color = '#2F2F2F';
+          cor3.style.color = '#2F2F2F';
+          cor4.style.color = '#2F2F2F';
+          cor5.style.color = '#2F2F2F';
+        }
+      }
+    
+    const text = document.getElementById('text');
+    text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");
+    const ele =document.querySelectorAll('span');
+    for(var i = 1; i<ele.length;i++){
+      ele[i].style.transform='rotate(' +i*16.5+'deg)';
+    }
+
+    
+  </script>
+  <footer>
+    <div class="sob">
+      <div class="esquerda">
+        <div class="titulo">
+          <div class="logo">
+  
+          </div>
+          <h2>Diego Fernando</h2>
+        </div>
+        <div class="frase">
+          <p>“Lorem Ipsum is simply dummy text of the printing and typesetting 
+            industry. Lorem Ipsum has been the industry's.”</p>
+        </div>
+        <div class="logo">
+          <div class="behance"></div>
+          <div class="dribbble"></div>
+          <div class="linkedin"></div>
+          <div class="github"></div>
+        </div>
+      </div>
+      <div class="direita">
+        <form action="">
+          <input type="text" placeholder="Nome...">
+          <input type="text" placeholder="Email...">
+          <textarea name="" id="" cols="30" rows="10" placeholder="Mensagem..."></textarea>
+          <input type="submit">
+        </form>
+      </div>
+    </div>
+    <div class="sub">
+      <div class="menu">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#cor5">O que eu faço</a></li>
+          <li><a href="#hobbie">Hobbies</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
