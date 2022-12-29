@@ -7,15 +7,72 @@
   
 }
 
+strong{
+  margin: 0;
+  padding: 0;
+}
+
 html, body{
   height: 100%;
-  
+}
+
+.top{
+  width: 100%;
+  background-color: #21AE85;
+  color: white;
+  margin: 0;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.top:hover{
+  background-color: #179672;
+}
+
+.top .interno{
+  max-width: 800px;
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.top .interno p{
+  margin: 0;
+  padding: 0;
+}
+
+.top .interno .icone{
+  margin-right: 4px;
+}
+
+.linkedin-button{
+  display: flex;
+  background-color: white;
+  color: #21AE85;
+  margin: 0;
+  padding: 0;
+  padding: 2px 35px;
+  align-items: center;
+  margin-left: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.linkedin-button p{
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
 }
 
 header{
   width: 80%;
   margin: 0 auto;
   padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 header .logo{
@@ -24,6 +81,87 @@ header .logo{
   height: 120px;
   background-position: center;
   background-size: cover;
+  -webkit-animation: spin 10s linear infinite;
+  -moz-animation: spin 10s linear infinite;
+  animation: spin 10s linear infinite;
+}
+
+@-webkit-keyframes spin{
+  100%{-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes spin{
+  100%{-webkit-transform: rotate(360deg);}
+}
+@keyframes spin{
+  100%{-webkit-transform: rotate(360deg);}
+}
+
+.navMenu a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0 10px;
+  display: inline-block;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:hover {
+  color: #21AE85;
+}
+
+.navMenu .dot {
+  width: 6px;
+  height: 6px;
+  background: #21AE85;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:nth-child(1):hover ~ .dot {
+  -webkit-transform: translateX(30px);
+  transform: translateX(35px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(2):hover ~ .dot {
+  -webkit-transform: translateX(110px);
+  transform: translateX(135px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(3):hover ~ .dot {
+  -webkit-transform: translateX(200px);
+  transform: translateX(230px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(4):hover ~ .dot {
+  -webkit-transform: translateX(285px);
+  transform: translateX(330px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(5):hover ~ .dot {
+  -webkit-transform: translateX(285px);
+  transform: translateX(445px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
 }
 
 main{
@@ -110,16 +248,13 @@ main .nome{
 .batista span{
   color: #21AE85;
 }
-
 .front{
   font-size: 50px;
   top: 0;
   left: -100px;
   color: #DF4C59;
-}
-
-.front .line{
-
+  letter-spacing: 5px;
+  
 }
 
 .ux{

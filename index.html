@@ -5,26 +5,45 @@
   <link rel="stylesheet" href="./css/style.css">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/5943701490.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <title>Diego Fernando Reis Batista</title>
   <link rel="icon" type="image/x-icon" href="./img/Ellipse 13.png">
 </head>
 <body id="body">
-  <div class="subir">
-
+  <div class="top" onclick="location.href='https://www.linkedin.com/in/diego-dvlopr/'">
+    <div class="interno">
+      <div class="icone"><i class="fa-solid fa-arrow-right"></i></div>
+      <p>Qualquer dúvida ou sugestão, <strong>Vamos conversar.</strong></p>
+      <div class="linkedin-button">
+        <div class="icone"><i class="fa-brands fa-linkedin"></i></div>
+        <p>LinkedIn</p>
+      </div>
+    </div>
   </div>
   <header id="home">
     <div class="logo"></div>
+    <nav class="navMenu">
+      <a href="#">Home</a>
+      <a href="#">Carreira</a>
+      <a href="#">Skills</a>
+      <a href="#">Projetos</a>
+      <a href="#">Contato</a>
+      <div class="dot"></div>
+    </nav>
   </header>
   <main id="mudar">
     <div class="banner">
       <div class="redes-sociais">
-        <div class="behance"></div>
+        <div class="behance" ></div>
         <div class="dribbble"></div>
-        <div class="linkedin"></div>
-        <div class="github"></div>
+        <div class="linkedin" onclick="location.href='https://www.linkedin.com/in/diego-dvlopr/'"></div>
+        <div class="github" onclick="location.href='https://github.com/Diego-Fernando-Reis'"></div>
       </div>
       <div class="nome">
-        <h2 class="front">Front-End <div class="line"></div></h2>
+        <h2 class="front auto-type"></h2>
         <h1 class="diego" id="cor">DIEGO</h1>
         <h2 class="fernando" id="cor2">FERNANDO</h2>
         <h2 class="reis" id="cor3"><span>R</span>EIS</h2>
@@ -36,10 +55,18 @@
     <div class="quem-sou-eu" id="cor5">
       <div class="texto">
         <h2>Quem eu sou?!</h2>
-        <h3>Meu nome é Diego Fernando, sou programador Front-end, aspirante a ux/ui, passo as madrugadas 
-          programando ou em qualquer horário livre, planejo ser um programador FullStack para ampliar meu 
-          conhecimento, e também criar uma startup baseada em aplicativo, mas minha prioridade é ter uma 
-          carreira em programação com UX/UI.</h3>
+        <h3>Olá meu nome é Diego Reis, seja bem vindo ao meu linkedin, e quero te contar minha história!
+
+          Um rapaz criado em comunidade, enfrentou algumas dificuldades na vida, porém, com muito amor e dedicação, meus pais lutaram para que não faltasse comida para mim e meu irmão, um dia sequer, aprendi a ler aos 3 anos de idade, graças a minha avó que teve o feeling para perceber que eu amava histórias em quadrinhos, então, sempre que tomava conta de mim, me dava os recortes de jornal com a parte dos quadrinhos para eu ler me ajudando com palavras que eu não sabia ainda(Meu favorito era o recruta zero.
+          
+          Sempre fui apaixonado por filmes e coisas com mistério, amava ter de descobrir algo e solucionar problemas, aos 14 anos me via envolvido em problemas de lógica, eu e dois amigos literalmente passávamos o dia todinho na lan house, com as nossas interas de dinheiro, resolvendo questões de lógica.
+          
+          Assim, fui me tornando o solucionador da família, fiz o encanamento da casa dos meus pais, consertava televisão, ventilador, uma vez fiquei surpreso de consertar a furadeira elétrica de um amigo que eu mesmo tinha queimado furando a parede para colocar um armário para a minha mãe.
+          
+          Até que um dia conheci um amigo que gostou desse meu jeito de consertar as coisas ou construir e trabalhei na Empresa dele durante um ano e meio e foi ai que tive contato pela primeira vez com a programação, cai totalmente de para-quedas na demanda de um deputado que precisava de um site para divulgar seu trabalho, foi penoso mas concluí e foi assim que descobri minha profissão, já participei do hiring coders e cheguei na semi-final e atualmente estou no Programadores Cariocas e pretendo me aperfeiçoar cada vez mais com programação.
+          
+          Espero que gostem, e se inspirou alguém, pode me chamar no direct, que ficarei feliz emtrocar idéias!
+          Abraço.</h3>
       </div>
       <div class="texto2" >
         <h2 id="cor6" class="contorno2">TECNOLOGIAS</h2>
@@ -98,11 +125,18 @@
       </div>
     </div>
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script>
     const navbar = document.getElementById("mudar");
     const sticky = navbar.offsetTop;
     const body = document.getElementById('body');
     const cor = document.getElementById('cor');
+    let typed = new Typed('.auto-type', {
+      strings: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'React', 'Jquery', 'Next.Js'],
+      typeSpeed: 80,
+      backSpeed: 100,
+      loop: true
+    })
     document.addEventListener("scroll", function() {
       myFunction();
     });
