@@ -297,6 +297,8 @@ main .nome{
   margin-top: 200px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  position: relative;
+  margin-bottom: 200px;
 }
 
 .portifolio .sobre .parte1{
@@ -307,14 +309,12 @@ main .nome{
   border-top-right-radius: 20px;
   color: rgb(255, 255, 255);
   justify-content: space-between;
-  padding: 5px 0;
   padding-bottom: 0;
   
 }
 
 .portifolio .sobre .parte1 .abas{
   display: flex;
-  padding: 0 15px;
 }
 
 .portifolio .sobre .parte1 .abas i{
@@ -330,18 +330,22 @@ main .nome{
 .port1, .port2, .port3{
   display: flex;
   align-items: center;
-  padding: 0 4px;
+  padding: 0 20px;
+  height: 100%;
+  cursor: pointer;
 }
 
-.port1 .linha, .port2 .linha, .port3 .linha{
+.port2 .linha, .port3 .linha{
   width: 1px;
   background-color: rgb(121, 121, 121);
   height: 20px;
-  margin-left: 8px;
+  margin-left: 35px;
 }
 
 .port1{
   background-color: rgb(20, 20, 20);
+  border-top-left-radius: 20px;
+  padding: 0 35px;
 }
 
 .portifolio .sobre .parte1 .icones{
@@ -398,190 +402,137 @@ main .nome{
   display: none;
 }
 
-main .carreira .timeline{
-  background-color: rgba(255, 255, 255, 0.09);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(20px);
-  padding: 50px 0;
-  max-width: 1300px;
-  margin: 2rem auto;
-  border-radius: 10px;
-  position: relative;
-}
-
-@keyframes zoomInOut{
-
-  0%,
-  100%{
-    transform: scale(0.5);
-  }
-
-  50%{
-    transform: scale(1.2);
-  }
-}
-
-.timeline ul li{
-  list-style-type: none;
-  position: relative;
-  width: 6px;
-  margin: 0 auto;
-  padding-top: 50px;
-  background-color: rgba(255, 255, 255, 0.09);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(20px);
-  border-radius: 10px;
-}
-
-.timeline ul li::after{
+.glow::before, .glow::after{
   content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  background: linear-gradient(45deg, #21AE85, #21AE85, #21AE85, #21AE85, #21AE85, #21AE85, #21AE85, #21AE85, #21AE85);
+  background-size: 400%;
+  width: calc(100% + 6px);
+  height: calc(100% + 1px);
+  border-radius: 20px;
+  z-index: -1;
+  animation: animate 20s linear infinite;
+}
+
+@keyframes animate{
+  0%{
+    background-position: 0 0;
+  }
+  50%{
+    background-position: 400% 0;
+  }
+  100%{
+    background-position: 0 0;
+  }
+}
+
+.glow::after{
+  filter: blur(40px);
+}
+
+.carreira{
+  position: relative;
+  padding: 750px 0;
+  margin-top: 200px;
+}
+
+.carreira .inicio{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #21AE85;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  
+}
+
+.carreira .inicio::after{
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #21AE85;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  filter: blur(8px);
+}
+
+.carreira .linha-vertical{
+  width: 6px;
+  height: 1500px;
+  background-color: rgba(255, 255, 255, 0.11);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.404);
+  transform: translate(-50%, 0);
+  z-index: -1;
+  border-bottom: 1px solid transparent;
+}
+
+.carreira .linha-vertical::after{
+  content: '';
+  width: 6px;
+  height: 25px;
+  background-color: #21AE85;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.404);
+  transform: translate(-50%, 0);
+  z-index: -2;
+}
+
+.carreira1, .carreira2, .carreira3, .carreira4, .carreira5{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
   position: absolute;
   left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  width: 30px;
-  height: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.404);
+  transform: translate(-50%, 0);
+  z-index: 0;
+}
+
+.carreira1{
+  top: 250px;
+}
+
+.carreira2{
+  top: 500px;
+}
+
+.carreira3{
+  top: 750px;
+}
+
+.carreira4{
+  top: 1000px;
+}
+
+.carreira5{
+  top: 1250px;
+}
+
+.carreira .fim{
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: inherit;
-  z-index: 1;
-}
-
-.timeline ul li div{
-  position: relative;
-  bottom: 0;
-  width: 400px;
-  padding: 2rem;
-  background-color: #fdc927;
-  box-shadow: 0px 0px 0px 6px rgb(255, 255, 255 / 40%);
-  backdrop-filter: blur(5px);
-  border-radius: 10px;
-  color: #000;
-  margin: 1rem 0;
-}
-
-.timeline ul li div::before{
-  content: '';
+  background-color: rgba(255, 255, 255, 0.705);
   position: absolute;
-  bottom: 7px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-}
-
-.timeline ul li div::after{
-  content: '';
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  height: 100%;
-  left: 20%;
-  background-image: url();
-  animation: zoomInOut 8s linear infinite;
+  bottom: -10px;
+  left: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.404);
+  transform: translate(-50%, 0);
   z-index: -1;
-}
-
-.timeline ul li:nth-child(odd) div{
-  left: 45px;
-}
-
-.timeline ul li:nth-child(odd) div::before{
-  left: -15px;
-  border-width: 8px 16px 8px 0;
-  border-color: transparent #000 transparent transparent;
-}
-
-.timeline ul li:nth-child(even) div{
-  left: -429px;
-}
-
-.timeline ul li:nth-child(even) div::before{
-  right: -15px;
-  border-width: 8px 0px 8px 16px;
-  border-color: transparent transparent transparent #000;
-}
-
-.timeline ul li div img{
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
-  padding: 10px;
-  background-color: #fdc927;
-  box-shadow: 0px 0px 0px 6px rgb(255, 255, 255 / 40%);
-  margin-top: -10rem;
-}
-
-.timeline h3{
-  display: block;
-  font-size: 1.2rem;
-  margin-top: -1rem;
-  float: right;
-  text-transform: uppercase;
-}
-
-.timeline ul li::after{
-  transition: background 0.5s ease-in-out;
-}
-
-.timeline ul li.in-view::after{
-  background-color: #000;
-}
-
-.timeline ul li div{
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
-}
-
-.timeline ul li:nth-child(odd) div{
-  transform: translate3d(200px, 0, 0);
-}
-
-.timeline ul li:nth-child(even) div{
-  transform: translate3d(-200px, 0, 0);
-}
-
-.timeline ul li.in-view div{
-  transform: none;
-  visibility: visible;
-  opacity: 1;
-}
-
-.timeline-clippy ul li::after{
-  width: 40px;
-  height: 40px;
-  border-radius: 0;
-}
-
-.timeline-rhombus ul li::after{
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-}
-
-.timeline-rhombus ul li div::before{
-  bottom: 12px;
-}
-
-.timeline-star ul li::after{
-  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-}
-
-.timeline-heptagon ul li::after{
-  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20);
-}
-
-.timeline-infinite ul li::after{
-  animation: scaleAnimation 2s infinite;
-}
-
-@keyframes scaleAnimation{
-  0%{
-    transform: translateX(-50%) scale(1);
-  }
-
-  50%{
-    transform: translateX(-50%) scale(1.25);
-  }
+  
 }
 
 main .quem-sou-eu{
